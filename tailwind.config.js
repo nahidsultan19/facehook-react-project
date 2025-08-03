@@ -4,7 +4,7 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      paddingLeft: "1rem",
     },
     extend: {
       fontFamily: {
@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         lwsGreen: "#00D991",
-        deepDark: "#1e1e2f",
+        deepDark: "#17181C",
         mediumDark: "#1E1F24",
         lighterDark: "#27292F",
       },
