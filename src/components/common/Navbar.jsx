@@ -7,9 +7,9 @@ import Logout from "../auth/Logout";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 border-b border-['#3F3F3F'] bg-['#1E1F24'] py-4">
-      <div className="text-white flex flex-col items-center justify-between gap-6 sm:flex-row">
-        <Link href="/">
+    <nav className="sticky top-0 z-50 border-b border-['#3F3F3F'] bg-['#1E1F24'] py-4 px-10">
+      <div className=" text-white flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <Link to="/">
           <img
             className="max-w-[100px] rounded-full lg:max-w-[130px]"
             src={Logo}
@@ -17,7 +17,7 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center space-x-4">
-          <Link href="/" className="btn-primary">
+          <Link to="/" className="btn-primary">
             <img src={HomeIcon} alt="Home" />
             Home
           </Link>
