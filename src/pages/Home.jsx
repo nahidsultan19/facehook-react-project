@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <div className="text-white">
       <h2 className="font-primary">Home page</h2>
+
       <Link to="/profile">Profile page</Link>
     </div>
   );
