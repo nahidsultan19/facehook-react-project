@@ -10,17 +10,12 @@ const ProfileInfo = () => {
         {/* <!-- profile image --> */}
         <div class="relative mb-8 max-h-[180px] max-w-[180px] rounded-full lg:mb-11 lg:max-h-[218px] lg:max-w-[218px]">
           <ProfileImage />
-
-          <button class="flex-center absolute bottom-4 right-4 h-7 w-7 rounded-full bg-black/50 hover:bg-black/80">
-            <img src="./assets/icons/edit.svg" alt="Edit" />
-          </button>
         </div>
-        {/* <!-- name , email --> */}
-        <div>
+        <div className="mt-12">
           <h3 class="text-2xl font-semibold text-white lg:text-[28px]">
             {state?.user?.firstName} {state?.user?.lastName}
           </h3>
-          <p class="leading-[231%] lg:text-lg">{state?.user?.email}</p>
+          <p class="leading-[231%] lg:text-lg py-1">{state?.user?.email}</p>
         </div>
 
         {/* <!-- bio --> */}
