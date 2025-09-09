@@ -9,7 +9,9 @@ const Home = () => {
     <div className="text-white">
       <h2 className="font-primary">Home page</h2>
 
-      <Link to="/profile">Profile page</Link>
+      <Link to="/profile" className="underline">
+        Go to Profile page
+      </Link>
     </div>
   );
 };
