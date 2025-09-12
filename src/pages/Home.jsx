@@ -1,9 +1,14 @@
+import { useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
+import useAxios from "../hooks/useAxios";
+import { postReducer } from "../reducers/PostReducer";
+import { initialState } from "../reducers/ProfileReducer";
 
 const Home = () => {
-  const { auth } = useAuth();
-  console.log(auth);
+  const [state, dispatch] = useReducer(postReducer, initialState);
+  const { api } = useAxios();
+
+  useEffect(() => {}, []);
 
   return (
     <div className="text-white">
