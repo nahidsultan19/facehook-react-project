@@ -1,7 +1,7 @@
 import { actions } from "../actions";
 
 const innitialState = {
-  post: [],
+  posts: [],
   loading: false,
   error: null,
 };
@@ -24,7 +24,7 @@ const postReducer = (state, action) => {
     case actions.post.DATA_ERROR: {
       return {
         ...state,
-        loading: true,
+        loading: false,
         error: actions.error,
       };
     }

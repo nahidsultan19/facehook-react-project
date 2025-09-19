@@ -6,7 +6,7 @@ const ProfileInfo = () => {
   const { state } = useProfile();
   return (
     <div>
-      <div class="flex flex-col items-center py-8 text-center">
+      <div class="flex flex-col items-center py-8 text-center w-4xl mx-auto">
         {/* <!-- profile image --> */}
         <div class="relative mb-8 max-h-[180px] max-w-[180px] rounded-full lg:mb-11 lg:max-h-[218px] lg:max-w-[218px]">
           <ProfileImage />

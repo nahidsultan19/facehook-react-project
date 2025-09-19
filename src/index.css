@@ -44,6 +44,27 @@
   } */
 /* } */
 
+.auth-input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: rgb(204 204 204 / 14%);
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 41 47 / var(--tw-bg-opacity));
+  padding: 0.375rem;
+}
+
+.auth-input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+  .auth-input {
+    padding: 0.75rem;
+  }
+}
+
 @theme {
   --font-primary: "Inter", "sans-serif";
   --breakpoint-3xl: 120rem;
@@ -59,6 +80,43 @@
 }
 .bg-deepDark {
   background-color: var(--color[#17181C]);
+}
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 
 .card {

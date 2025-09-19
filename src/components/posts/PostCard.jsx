@@ -6,10 +6,10 @@ import PostHeader from "./PostHeader";
 const PostCard = ({ post }) => {
   return (
     <>
-      <article className="card mt-6 lg:mt-6">
+      <article className="w-4xl mx-auto card mt-6 lg:mt-6">
         <PostHeader post={post} />
         <PostBody poster={post?.image} content={post?.content} />
-        <PostAction postId={post?.id} commentCount={post?.comments.length} />
+        <PostAction postId={post?.id} commentCount={post?.comments?.length} />
         <PostComments post={post} />
       </article>
     </>

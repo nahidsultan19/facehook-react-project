@@ -34,7 +34,9 @@ const Navbar = () => {
 
           <button className="flex-center !ml-8 gap-3 flex">
             <span className="text-lg font-medium lg:text-xl mt-0.5">
-              {user?.firstName} {user?.lastName}
+              <Link to="/profile">
+                {user?.firstName} {user?.lastName}
+              </Link>
             </span>
             <img
               className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px] rounded-full"

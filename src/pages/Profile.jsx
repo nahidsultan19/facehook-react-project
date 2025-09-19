@@ -8,10 +8,6 @@ import { useProfile } from "../hooks/useProfile";
 
 const Profile = () => {
   const { state, dispatch } = useProfile();
-  // const [user, setUser] = useState(null);
-  // const [posts, setPosts] = useState([]);
-  // const [loading, setLoading] = useState(false);
-  // const [error, setError] = useState(null);
 
   const { api } = useAxios();
   const { auth } = useAuth();
