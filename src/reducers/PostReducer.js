@@ -1,6 +1,6 @@
 import { actions } from "../actions";
 
-const innitialState = {
+const initialState = {
   posts: [],
   loading: false,
   error: null,
@@ -34,4 +34,4 @@ const postReducer = (state, action) => {
   }
 };
 
-export { innitialState, postReducer };
+export { initialState, postReducer };

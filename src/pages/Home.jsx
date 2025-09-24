@@ -2,8 +2,7 @@ import { useEffect, useReducer } from "react";
 import { actions } from "../actions";
 import PostList from "../components/posts/PostList";
 import useAxios from "../hooks/useAxios";
-import { postReducer } from "../reducers/PostReducer";
-import { initialState } from "../reducers/ProfileReducer";
+import { initialState, postReducer } from "../reducers/PostReducer";
 
 const Home = () => {
   const [state, dispatch] = useReducer(postReducer, initialState);
