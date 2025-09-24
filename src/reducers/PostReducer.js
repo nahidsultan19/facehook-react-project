@@ -18,14 +18,14 @@ const postReducer = (state, action) => {
       return {
         ...state,
         loading: false,
-        posts: actions.data,
+        posts: action.data,
       };
     }
     case actions.post.DATA_FETCH_ERROR: {
       return {
         ...state,
         loading: false,
-        error: actions.error,
+        error: action.error,
       };
     }
     default: {
