@@ -1,6 +1,7 @@
 import { Navigate } from "react-router-dom";
 import Navbar from "../components/common/Navbar";
 import { useAuth } from "../hooks/useAuth";
+import PostProvider from "../providers/PostProvider";
 import ProfileProvider from "../providers/ProfileProvider";
 
 const PrivateRoutes = ({ children }) => {
@@ -11,10 +12,12 @@ const PrivateRoutes = ({ children }) => {
   }
   return (
     <div>
-      <ProfileProvider>
-        <Navbar />
-        <div className="px-8">{children}</div>
-      </ProfileProvider>
+      <PostProvider>
+        <ProfileProvider>
+          <Navbar />
+          <div className="px-8">{children}</div>
+        </ProfileProvider>
+      </PostProvider>
     </div>
   );
 };
