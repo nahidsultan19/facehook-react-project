@@ -16,7 +16,6 @@ const PostEntry = ({ onCreate }) => {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
   } = useForm();
 
   const user = profile?.user ?? auth?.user;
@@ -90,6 +89,13 @@ const PostEntry = ({ onCreate }) => {
             type="submit"
           >
             Post
+          </button>
+          <button
+            type="button"
+            onClick={onCreate}
+            className="auth-input bg-gray-600 font-bold text-white transition-all hover:opacity-90 ml-2"
+          >
+            Cancel
           </button>
         </div>
       </form>

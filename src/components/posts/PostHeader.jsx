@@ -16,6 +16,7 @@ const PostHeader = ({ post }) => {
   //   const { auth } = useAuth();
   const { avatarUrl } = useAvatar(post);
   const [showAction, setShowAction] = useState(false);
+  const [showPostEntry, setShowPostEntry] = useState(false);
   const { auth } = useAuth();
 
   const isMe = post?.author?.id === auth?.user?.id;
@@ -27,8 +28,12 @@ const PostHeader = ({ post }) => {
     setShowAction(!showAction);
   };
 
+  const handlePostEdit = (post) => {
+    console.log("editing post..", post);
+  };
+
   // delete post
-  const handleDeletePost = async (event) => {
+  const handleDeletePost = async () => {
     dispatch({ type: actions.post.DATA_FETCHING });
     try {
       const response = await api.delete(
@@ -71,7 +76,10 @@ const PostHeader = ({ post }) => {
 
         {showAction && (
           <div className="action-modal-container">
-            <button className="action-menu-item hover:text-lwsGreen">
+            <button
+              className="action-menu-item hover:text-lwsGreen"
+              onClick={() => handlePostEdit(post)}
+            >
               <img src={EditIcon} alt="Edit" />
               Edit
             </button>
